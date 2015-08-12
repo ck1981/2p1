@@ -1,13 +1,14 @@
 mysql_root_password: stagingpw
 
 wordpress_sites:
-  example.com:
+  2p1.com:
     site_hosts:
-      - staging.example.com
+      - 45.55.215.18
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:roots/bedrock.git
+    #repo: git@github.com:roots/bedrock.git
+    repo: git@github.com:ck1981/2p1.git
     branch: master
-    # subtree: site # Use this if following the roots-example-project structure
+    subtree: site # Use this if following the roots-example-project structure
     multisite:
       enabled: false
       subdomains: false
@@ -18,12 +19,12 @@ wordpress_sites:
       duration: 30s
     system_cron: true
     env:
-      wp_home: http://staging.example.com
-      wp_siteurl: http://staging.example.com/wp
+      wp_home: http://45.55.215.18
+      wp_siteurl: http://45.55.215.18/wp
       wp_env: staging
-      db_name: example_staging
-      db_user: example_dbuser
-      db_password: example_dbpassword
+      db_name: 2p1_dbbedrock
+      db_user: 2p1_crakool
+      db_password: HU9834%%%neLQQ2
       # Generate your keys here: https://api.wordpress.org/secret-key/1.1/salt/
       auth_key: "generateme"
       auth_salt: "generateme"
